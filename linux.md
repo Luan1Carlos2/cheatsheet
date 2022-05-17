@@ -20,8 +20,6 @@ sed -i '$aconteudo' /pasta/arquivo
 xfs_growfs /dev/algo -d
 #listar erros de selinux
 journalctl -t setroubleshoot
-#usuários mysql
-SELECT User,Host FROM mysql.user;
 #substitui todas as ocorrências em todos os arquivos
 sed -i -e 's/a/b/g' /foo/bar/*.conf
 #20 maiores arquivos/pastas da pasta atual
