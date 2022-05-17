@@ -1,0 +1,18 @@
+//ler arquivo começando do final e atualizando sempre, sem o "+F" apenas vai para o final
+less +GF
+wc -l                                           //contar quantidade de linhas do stdout ou arquivo
+ps axjf                                         // listar processos em arvore
+ncdu                                            //uso de pasta
+awk '{print $2}'                                // retorna apenas a segunda coluna de uma saida de dados
+sudo dnf needs-restarting -sr                   // mostra se é necessário reiniciar algum serviço ou realizar reboot
+ip -br a | grep "UP" | awk '{print $3}' | sed 's/\/.*//' // mostra lista de ips disponíveis
+useradd -m -s /bin/bash usuario                 //criar usuário
+sed -i '$aconteudo' /pasta/arquivo              //adiciona conteudo no final de arquivo
+xfs_growfs /dev/algo -d                         // cresce o xfs pra o tamanho máximo
+journalctl -t setroubleshoot                    // listar erros de selinux
+SELECT User,Host FROM mysql.user;               // usuários mysql
+sed -i -e 's/a/b/g' /foo/bar/*.conf             // substitui todas as ocorrências em todos os arquivos
+du --max-depth=1 2> /dev/null | sort -n -r | head -n20 // 20 maiores arquivos/pastas da pasta atual
+:w !sudo tee %                                  // salvar vim com sudo
+virt-v2v -i ova PNET_4.2.10.ova -o libvirt -of qcow2 //
+sudo cu -s 115200 -l /dev/ttyUSB0 --nostop --parity=none //acessar console
