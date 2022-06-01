@@ -32,3 +32,5 @@
 >virt-v2v -i ova PNET_4.2.10.ova -o libvirt -of qcow2
 #### console a partir do shell linux
 >sudo cu -s 115200 -l /dev/ttyUSB0 --nostop --parity=none
+#### Criar image qcow2 usando outra como base
+qemu-img create -fqcow2 -F qcow2 -b ubuntu.qcow2 ub2tu.qcow2
