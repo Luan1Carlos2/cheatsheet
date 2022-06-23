@@ -34,3 +34,6 @@
 >sudo cu -s 115200 -l /dev/ttyUSB0 --nostop --parity=none
 #### Criar image qcow2 usando outra como base
 qemu-img create -fqcow2 -F qcow2 -b ubuntu.qcow2 ub2tu.qcow2
+#### Forçar uso de certo tipo de chave no ssh
+ssh -oKexAlgorithms=[chave] root@0.0.0.0
+
