@@ -38,6 +38,7 @@ qemu-img create -fqcow2 -F qcow2 -b ubuntu.qcow2 ub2tu.qcow2
 ssh -oKexAlgorithms=diffie-hellman-group-exchange-sha1 root@0.0.0.0
 #### Forçar uso de certo tipo de algoritimo de chave no ssh
 ssh -oHostKeyAlgorithms=ssh-dss root@0.0.0.0
-
+### Converter imagem de disco usando qemu-img
+qemu-img convert -f qcow2 -O qcow2 /var/lib/libvirt/images/win2k19-en.qcow2 /home/publico/destino.qcow2
 
 
