@@ -40,5 +40,5 @@ ssh -oKexAlgorithms=diffie-hellman-group-exchange-sha1 root@0.0.0.0
 ssh -oHostKeyAlgorithms=ssh-dss root@0.0.0.0
 ### Converter imagem de disco usando qemu-img
 qemu-img convert -f qcow2 -O qcow2 /var/lib/libvirt/images/win2k19-en.qcow2 /home/publico/destino.qcow2
-
-
+### Apagar arquivos mais velhos que 30 dias
+find -maxdepth 1 -mtime +30 -exec em -rf {} +;
