@@ -45,6 +45,6 @@ find -maxdepth 1 -mtime +30 -exec em -rf {} +;
 ### Redimensionar imagem
 qemu-img resize focal-server-cloudimg-amd64-disk-kvm.img 50g
 ### Sobrescrever local pelo remoto no git
-git fetch --prune origin
-git reset --hard origin/main
+git fetch --prune origin  
+git reset --hard origin/main 
 git clean -f -d
