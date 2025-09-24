@@ -33,18 +33,18 @@
 #### console a partir do shell linux
 >sudo cu -s 115200 -l /dev/ttyUSB0 --nostop --parity=none
 #### Criar image qcow2 usando outra como base
-qemu-img create -fqcow2 -F qcow2 -b ubuntu.qcow2 ub2tu.qcow2
+>qemu-img create -fqcow2 -F qcow2 -b ubuntu.qcow2 ub2tu.qcow2
 #### Forçar uso de certo tipo de chave de troca no ssh
-ssh -oKexAlgorithms=diffie-hellman-group-exchange-sha1 root@0.0.0.0
+>ssh -oKexAlgorithms=diffie-hellman-group-exchange-sha1 root@0.0.0.0
 #### Forçar uso de certo tipo de algoritimo de chave no ssh
-ssh -oHostKeyAlgorithms=ssh-dss root@0.0.0.0
+>ssh -oHostKeyAlgorithms=ssh-dss root@0.0.0.0
 ### Converter imagem de disco usando qemu-img
-qemu-img convert -f qcow2 -O qcow2 /var/lib/libvirt/images/win2k19-en.qcow2 /home/publico/destino.qcow2
+>qemu-img convert -f qcow2 -O qcow2 /var/lib/libvirt/images/win2k19-en.qcow2 /home/publico/destino.qcow2
 ### Apagar arquivos mais velhos que 30 dias
-find -maxdepth 1 -mtime +30 -exec rm -rf {} +;
+>find -maxdepth 1 -mtime +30 -exec rm -rf {} +;
 ### Redimensionar imagem
-qemu-img resize focal-server-cloudimg-amd64-disk-kvm.img 50g
+>qemu-img resize focal-server-cloudimg-amd64-disk-kvm.img 50g
 ### Sobrescrever local pelo remoto no git
-git fetch --prune origin  
-git reset --hard origin/main 
-git clean -f -d
+>git fetch --prune origin  
+>git reset --hard origin/main 
+>git clean -f -d
